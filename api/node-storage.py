@@ -85,13 +85,13 @@ def main(myArgs):
     r = Api.REST(secretKey=theSecretKey, accessKey=theAccessKey, url=serverUrl)
     serverCheck(serverName, headerValue, r, serverPort)
     if theTask == "list":
-        thePost = "/api/appliance/" + thenodeId + "/disk"
+        thePost = "/api/node/" + thenodeId + "/disk"
         prJson(r.request('GET', thePost, data=urlData, headers=headerValue)) 
     elif theTask == "usage":
-        thePost = "/api/appliance/" + thenodeId + "/usage"
+        thePost = "/api/node/" + thenodeId + "/usage"
         prJson(r.request('GET', thePost, data=urlData, headers=headerValue))
     elif theTask == "add":
-        thePost = "/api/appliance/" + thenodeId + "/diskpool/" + thePool + "/disk"
+        thePost = "/api/node/" + thenodeId + "/diskpool/" + thePool + "/disk"
         prJson(r.request('POST', thePost, data=urlData, headers=headerValue))
     else:
         subprocess.call('clear', shell=True)

@@ -58,7 +58,7 @@ def main(myArgs):
 
     serverStrip(server)
 
-    serverUrl2 = "/api/appliance/" + nodeId
+    serverUrl2 = "/api/node/" + nodeId
 
     urlData = {}
     try:
@@ -133,7 +133,7 @@ def serverCheck(serverName, headerValue, r, serverPort):
         hiThere = "ping -n 1 " + serverName + " > /dev/null"
         if os.system(hiThere) == 0:
             socketCheck(serverName, serverPort)
-            prJson(r.request('GET', '/api/appliance', headers=headerValue))
+            prJson(r.request('GET', '/api/node', headers=headerValue))
         else:
             subprocess.call('clear', shell=True)
             print "Bad IP or Address for server: "  + serverName + " is completely unreachable"
@@ -142,7 +142,7 @@ def serverCheck(serverName, headerValue, r, serverPort):
         hiThere = "ping -c 1 " + serverName + " > /dev/null"
         if os.system(hiThere) == 0:
             socketCheck(serverName, serverPort)
-            prJson(r.request('GET', '/api/appliance', headers=headerValue))
+            prJson(r.request('GET', '/api/node', headers=headerValue))
         else:
             subprocess.call('clear', shell=True)
             print "Bad IP or Address for server: " + serverName + " is completely unreachable"

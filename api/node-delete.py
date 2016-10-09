@@ -29,7 +29,7 @@ def main(myArgs):
     secretKey = secretkey
     headerValue = {}
 
-    nodeId = '/api/appliance/' + nodeid
+    nodeId = '/api/node/' + nodeid
 
     bassUrl = "http://" + server
     r = Api.REST(secretKey=secretKey, accessKey=accessKey, url=serverUrl)

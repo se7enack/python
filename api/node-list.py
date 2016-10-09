@@ -76,7 +76,7 @@ Example:
 
 def goTime(r,prJson,headerValue):
         try:
-            prJson(r.request('GET', '/api/appliance', headers=headerValue))
+            prJson(r.request('GET', '/api/node', headers=headerValue))
         except IOError:
             print "Connection Error: Please review the server log"
 

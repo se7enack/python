@@ -29,7 +29,7 @@ def main(myArgs):
     accessKey = accesskey
     secretKey = secretkey
 
-    serverUrl2 = "/api/appliance/" + nodeId + "/status"
+    serverUrl2 = "/api/node/" + nodeId + "/status"
 
     headerValue = {}
     headerValue["Accept"] = 'application/json' 

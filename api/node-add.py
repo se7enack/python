@@ -93,7 +93,7 @@ def serverCheck(serverName, urlData, headerValue, r, serverPort):
         hiThere = "ping -n 1 " + serverName + " > /dev/null"
         if os.system(hiThere) == 0:
             socketCheck(serverName, serverPort)
-            prJson(r.request('POST', '/api/appliance', data=urlData, headers=headerValue))
+            prJson(r.request('POST', '/api/node', data=urlData, headers=headerValue))
         else:
             subprocess.call('clear', shell=True)
             print "Bad IP or Address for server: "  + serverName + " is completely unreachable"
@@ -102,7 +102,7 @@ def serverCheck(serverName, urlData, headerValue, r, serverPort):
         hiThere = "ping -c 1 " + serverName + " > /dev/null"
         if os.system(hiThere) == 0:
             socketCheck(serverName, serverPort)
-            prJson(r.request('POST', '/api/appliance', data=urlData, headers=headerValue))
+            prJson(r.request('POST', '/api/node', data=urlData, headers=headerValue))
         else:
             subprocess.call('clear', shell=True)
             print "Bad IP or Address for server: " + serverName + " is completely unreachable"
