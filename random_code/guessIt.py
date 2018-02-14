@@ -7,9 +7,9 @@ __license__ = "GPL"
 
 import random
 
-high = 100
+high = 100000
 answer = random.randint(1, high)
-guess = ''
+guess = 0
 
 try:
     while guess != answer:
