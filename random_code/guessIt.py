@@ -7,20 +7,25 @@ __license__ = "GPL"
 
 import random
 
-answer = random.randint(1, 10)
+high = 100
+answer = random.randint(1, high)
 guess = ''
 
 try:
     while guess != answer:
-        guess = int(input('enter a number between 1 and 10: '))
-        if not 1 <= guess <= 10:
-            print('only numbers between 1-10 excepted')
+        guess = int(input('enter a number between 1 and {0}: '.format(high)))
+        if guess > answer:
+            print('too high')
+        if guess < answer:
+            print('too low')
+        if not 1 <= guess <= high:
+            print('only numbers between 1-{0} excepted'.format(high))
             print('exiting...')
             break
     else:
         print('you got it!')
 except:
-    print('only numbers between 1-10 excepted')
+    print('only numbers between 1-{0} excepted'.format(high))
     print('exiting...')
 
 
