@@ -14,6 +14,6 @@ print(genre)
 print('Tracks:')
 for song in tracks:
     track, title = song
-    print('\t' + str(title))
+    print('\t' + title)
 
 
