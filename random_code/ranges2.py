@@ -6,4 +6,5 @@ __date__ = "2/15/18"
 __license__ = "GPL"
 
 alphaString = "abcdefghijklmnopqrstuvwxyz"
-
+print(alphaString.index('e'))
+print(alphaString[4])

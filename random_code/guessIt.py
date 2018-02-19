@@ -7,7 +7,7 @@ __license__ = "GPL"
 
 import random
 
-high = 100000
+high = 10
 answer = random.randint(1, high)
 guess = 0
 

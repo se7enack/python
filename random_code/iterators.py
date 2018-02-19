@@ -15,3 +15,9 @@ print(next(iter1))
 print(next(iter1))
 next(iter1)
 print(next(iter1))
+
+# both of these are the same:
+for char in numbers:
+    print(char)
+for char in iter(numbers):
+    print(char)
