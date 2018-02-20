@@ -56,15 +56,11 @@ emailByState = {
     "WI": "senator_kohl@kohl.senate.gov",
     "WY": "craig@thomas.senate.gov"
 }
-# print(emailByState["MA"])
 
-# while True:
-#     dicKey = input('\n' + "Enter a valid two letter US state abbreviation or 'exit' to quit: ").upper()
-#     if dicKey == "EXIT":
-#         print('\n' + 'now exiting, bye!')
-#         break
-#     description = emailByState.get(dicKey, "There is no state {}".format(dicKey))
-#     print(description)
+# inOrder = list(emailByState.keys())
+# inOrder.sort()
+# for x in inOrder:
+#     print(x + " - " + str(emailByState[x]))
 
 while True:
     dicKey = input('\n' + "Enter a valid two letter State abbreviation: ").upper()
@@ -74,6 +70,6 @@ while True:
     if dicKey in emailByState:
         email = emailByState.get(dicKey)
         print('The email for {1} is: {0}'.format(email, dicKey))
+        print('_' * 45)
     else:
-        print("There is no state {}".format(dicKey))
-
+        print("There is no state \"{}\", Please try again.".format(dicKey))
