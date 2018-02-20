@@ -57,18 +57,24 @@ emailByState = {
     "WY": "craig@thomas.senate.gov"
 }
 
+inOrderState = sorted(list(emailByState.keys()))
+
 while True:
-    dicKey = input('\n' + "Enter a valid two letter State abbreviation: ").upper()
-    if dicKey == "EXIT":
+    dicKey = input('\n' + "Enter a valid two letter State abbreviation, \"all\" or \"exit\": ").upper()
+    email = emailByState.get(dicKey)
+    if dicKey == 'EXIT':
         print('\n' + 'now exiting, bye!')
         break
+    if dicKey == 'ALL':
+        print('Showing all!')
+        for x in inOrderState:
+            print(str(x) + ' - ' + str(emailByState[x]))
+        break
     if dicKey in emailByState:
-        email = emailByState.get(dicKey)
         print('The email for {1} is: {0}'.format(email, dicKey))
         print('_' * 45)
     else:
         print('There is no state \"{}\", Please try again.'.format(dicKey))
         print('Acceptable values:'.format())
-        inOrder = sorted(list(emailByState.keys()))
-        for x in inOrder:
+        for x in inOrderState:
             print(x, end=', ')
