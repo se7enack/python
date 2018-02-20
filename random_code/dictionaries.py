@@ -6,6 +6,7 @@ __date__ = "2/19/18"
 __license__ = "GPL"
 
 emailByState = {
+    "MA": "senator@kennedy.senate.gov",
     "AK": "Senator_Stevens@stevens.senate.gov",
     "AL": "senator@shelby.senate.gov",
     "AR": "senator.hutchinson@hutchinson.senate.gov",
@@ -24,7 +25,6 @@ emailByState = {
     "KS": "sam_brownback@brownback.senate.gov",
     "KY": "senator@mcconnell.senate.gov",
     "LA": "senator@breaux.senate.gov",
-    "MA": "senator@kennedy.senate.gov",
     "MD": "senator@mikulski.senate.gov",
     "ME": "senator@collins.senate.gov",
     "MI": "senator@levin.senate.gov",
@@ -67,9 +67,8 @@ while True:
         print('The email for {1} is: {0}'.format(email, dicKey))
         print('_' * 45)
     else:
-        print("There is no state \"{}\", Please try again.".format(dicKey))
-        print("Acceptable values:".format())
-        inOrder = list(emailByState.keys())
-        inOrder.sort()
+        print('There is no state \"{}\", Please try again.'.format(dicKey))
+        print('Acceptable values:'.format())
+        inOrder = sorted(list(emailByState.keys()))
         for x in inOrder:
             print(x, end=', ')
