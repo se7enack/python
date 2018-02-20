@@ -74,3 +74,6 @@ while True:
     if dicKey in emailByState:
         email = emailByState.get(dicKey)
         print('The email for {1} is: {0}'.format(email, dicKey))
+    else:
+        print("There is no state {}".format(dicKey))
+
