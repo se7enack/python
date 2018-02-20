@@ -68,7 +68,7 @@ while True:
         print('_' * 45)
     else:
         print("There is no state \"{}\", Please try again.".format(dicKey))
-        print("Values excepted:".format())
+        print("Acceptable values:".format())
         inOrder = list(emailByState.keys())
         inOrder.sort()
         for x in inOrder:
