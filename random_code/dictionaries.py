@@ -56,4 +56,13 @@ emailByState = {
     "WI": "senator_kohl@kohl.senate.gov",
     "WY": "craig@thomas.senate.gov"
 }
-print(emailByState["MA"])
+# print(emailByState["MA"])
+
+while True:
+    dicKey = input('\n' + "Enter a valid two letter State abbreviation: ").upper()
+    if dicKey == "EXIT":
+        print('\n' + 'now exiting, bye!')
+        break
+    if dicKey in emailByState:
+        email = emailByState.get(dicKey)
+        print('The email for {1} is: {0}'.format(email, dicKey))
