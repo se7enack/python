@@ -2,12 +2,10 @@
 
 __author__ = "Stephen J. Burke"
 __email__ = "steburke71@hotmail.com"
-__date__ = "2/20/18"
+__date__ = "2/21/18"
 __license__ = "GPL"
 
 import requests
-
-baseUrl = 'rest.prod.immedia-semi.com'
 
 
 def banner():
@@ -30,9 +28,9 @@ def banner():
 
 banner()
 
+baseUrl = 'rest.prod.immedia-semi.com'
 networkId = ""
 cameraId = ""
-
 choices = ((1, "Download all videos", "SB_TO_COME_BACK_TO"),
            (2, "Get network information", "/networks"),
            (3, "Get Sync Module information", "/network/" + networkId + "/syncmodules"),
@@ -54,6 +52,7 @@ choices = ((1, "Download all videos", "SB_TO_COME_BACK_TO"),
            (19, "Get information about supported regions", "/regions"),
            (20, "Get information about system health", "/health"),
            (21, "Get information about programs", "/api/v1/networks/" + networkId + "/programs")), 'don\'t blink!'
+
 options, bye = choices
 maxSize = len(options)
 
