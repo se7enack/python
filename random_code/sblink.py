@@ -30,9 +30,11 @@ def banner():
 
 banner()
 
-choices = ((1, "Download all videos", "SB_TO_COME_BACK_TO"), (2, "Get network information", "/networks"),
+choices = ((1, "Download all videos", "SB_TO_COME_BACK_TO"),
+           (2, "Get network information", "/networks"),
            (3, "Get Sync Module information", "/network/${NETWORKID}/syncmodules"),
-           (4, "Arm network", "/network/${NETWORKID}/arm"), (5, "Disarm network", "/network/${NETWORKID}/disarm"),
+           (4, "Arm network", "/network/${NETWORKID}/arm"),
+           (5, "Disarm network", "/network/${NETWORKID}/disarm"),
            (6, "Get homescreen information", "/homescreen"),
            (7, "Get events for network", "/events/network/${NETWORKID}"),
            (8, "Capture a new thumbnail", "/network/${NETWORKID}/camera/${CAMERAID}/thumbnail"),
@@ -62,6 +64,7 @@ if pick in range(1, maxSize + 1):
         num, msg, call = option
         if num == pick:
             fullUrl = 'https://' + baseUrl + call
+            print(fullUrl)
             r = requests.get(fullUrl)
             print(r.content)
 else:
