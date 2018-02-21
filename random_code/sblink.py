@@ -30,6 +30,9 @@ def banner():
 
 banner()
 
+networkId = ""
+cameraId = ""
+
 choices = ((1, "Download all videos", "SB_TO_COME_BACK_TO"),
            (2, "Get network information", "/networks"),
            (3, "Get Sync Module information", "/network/" + networkId + "/syncmodules"),
@@ -50,7 +53,7 @@ choices = ((1, "Download all videos", "SB_TO_COME_BACK_TO"),
            (18, "Get information about connected devices", "/account/clients"),
            (19, "Get information about supported regions", "/regions"),
            (20, "Get information about system health", "/health"),
-           (21, "Get information about programs", "/api/v1/networks/" + networkId + "/programs")), 'exit'
+           (21, "Get information about programs", "/api/v1/networks/" + networkId + "/programs")), 'don\'t blink!'
 options, bye = choices
 maxSize = len(options)
 
