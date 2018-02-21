@@ -15,4 +15,3 @@ print(numbersSorted)
 
 if numbersSorted == sorted(numbers):
     print("they are the same when sorted")
-
