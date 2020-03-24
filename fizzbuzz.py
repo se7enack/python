@@ -12,10 +12,10 @@ def buzz(n):
 
 def fizzbuzz(end):
 	num = 1
-	while num < end:
+	while num < end+1:
 	  	n=str(num)
 	  	print(n + fizz(num) + buzz(num))
 	  	num += 1
 
-max=324000000
-fizzbuzz(max+1)
+max=100
+fizzbuzz(max)
